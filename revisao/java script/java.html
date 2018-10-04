@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="ufc-8">
+</head>
+<body>
+	<script type="text/javascript">
+		function calcular(){//incio da funcao
+		//definicao de variavel
+		var nota1;
+		var nota2;
+		var media;
+		var soma;
+		//pedir que uvuario enforme nota1 e nota2
+		nota1=window.prompt("informe nota1:");
+		nota2=window.prompt("informe nota2:");
+		//soma as notas 
+	
+		//somar as notas-transforma em float
+		soma=parseFloat(nota1)+parseFloat(nota2);
+		console.log("a soma deu"+soma);
+		//media=dividir a soma por 2
+		media = soma/2;
+		console.log("a media deu"+media);
+		//teste-se a media for<7-reprovado
+		if(media< 7){
+		//mudar o html dentro de um elemento
+		var div=document.getElementById("resultado");
+		div.innerHTML="(sua media e:"+media+"situacao;aprovado");	
+		window.alert("sua media e:"+media+"portanto esta reprovado")
+}
+else{
+	window.alert("sua media e:"+media+"portanto esta aprvado")
+	var div=document.getElementById("resultado");
+		div.innerHTML="(sua media e:"+media+"situacao;aprovado");	
+		window.alert("sua media e:"+media+"portanto esta reprovado")
+}
+}
+//senao-aprovado
+}//final da funcao
+
+    </script>
+<!--botao html-oa clicar chama a funcao js-->
+<button onclick="calcular()">ok</button>
+</div id="resultado">
+<!--aqui sera apresentado o rasultado-->
+</div>
+</body>
+</html> 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8>"
+</head>
+<body>
+
+	<div id="entradas">
+		<input type="text"name="nota1"id="nota1">
+		<input type="text"name="nota2"id="nota2">
+		<button onclick="calcula()">calcular</button>
+	</div>
+
+	<div id="saida">
+
+	</div>
+	<hr>
+	<h2>Exercicio 2</h2>
+	<div id="entradas">
+		<input type="text"name="nota1"id="nota1">
+		
+		<button onclick="calcula2()">calcular</button>
+	</div>
+
+	<div id="saida2">
+
+	</div>
+	<script type="text/javascript">
+		//definicao de variavel
+		function calcula(){
+			var nota1;
+			var nota2;
+			var soma;
+			var media;
+			//pedir que usuario informe nota1 e nota2
+			nota1=document.getElementById("nota1").value;
+			nota2=document.getElementById("nota2").value;
+			//soma como notas - transforma em float
+			soma =parseFloat (nota1)+parseFloat(nota2);
+			console .log("a soma deu "+soma);
+			//media = dividir a soma por 2 
+			media = soma / 2 ;
+			console . log ("a midia deu"+media);
+			//teste -se um midia para <7-reprovado
+			if (media < 7){
+				document . getElementById("saida").innerHTML="sua media e :"+ media+"situacao : reprovado";
+				//senao - aprovado
+			}else{
+				document . getElementById("saida").innerHTML="sua media e :"+media+"situacao:aprovado";
+			}
+		}
+
+//resolucao do exercicio 2
+		function calcula2(){
+
+			var metro;
+			metro =document.getElementById("metro").value;
+ 			var milimitro;
+ 			milimitro = metro * 1000
+	         document.getElementById("vresultado2").innerHTML="valor convertido e"+milimetro;
+			
+		}
+	</script>	
+</body>
+</html>        
